@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
 
-namespace TODOapp.Models
+namespace TodoApp.Models
 {
     public class ApplicationUser : IdentityUser
     {
@@ -15,6 +15,6 @@ namespace TODOapp.Models
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-        public List<ToDoItem> ToDoItems { get; set; }
+        public List<TodoItem> ToDoItems { get; set; }
     }
 }

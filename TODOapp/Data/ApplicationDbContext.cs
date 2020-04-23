@@ -4,9 +4,9 @@ using System.Text;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using TODOapp.Models;
+using TodoApp.Models;
 
-namespace TODOapp.Data
+namespace TodoApp.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
@@ -16,8 +16,8 @@ namespace TODOapp.Data
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
-        public DbSet<ToDoItem> ToDoItems { get; set; }
-        public DbSet<ToDoStatus> ToDoStatus { get; set; }
+        public DbSet<TodoItem> TodoItems { get; set; }
+        public DbSet<TodoStatus> TodoStatus { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -41,21 +41,21 @@ namespace TODOapp.Data
             user.PasswordHash = passwordHash.HashPassword(user, "Admin8*");
             modelBuilder.Entity<ApplicationUser>().HasData(user);
 
-            //Create ToDo Statuses 
+            //Create Todo Statuses 
            
 
-            modelBuilder.Entity<ToDoStatus>().HasData(
-                new ToDoStatus()
+            modelBuilder.Entity<TodoStatus>().HasData(
+                new TodoStatus()
                 {
                     Id = 2,
-                    Title = "ToDo"
+                    Title = "Todo"
                 },
-                new ToDoStatus()
+                new TodoStatus()
                 {
                     Id = 3,
                     Title = "In Progress"
                 },
-                 new ToDoStatus()
+                 new TodoStatus()
                  {
                      Id = 4,
                      Title = "Done"

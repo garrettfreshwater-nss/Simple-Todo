@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Identity;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TODOapp.Models
+namespace TodoApp.Models
 {
-    public class ToDoItem
+    public class TodoItem
     {
         public int Id { get; set; }
 
@@ -15,11 +15,11 @@ namespace TODOapp.Models
         [Display(Name = "Title")]
         public string Title { get; set; }
 
-        public int ToDoStatusId { get; set; }
+        public int TodoStatusId { get; set; }
 
         [Required]
-        [Display(Name = "ToDoStatus")]
-        public ToDoStatus ToDoStatus { get; set; }
+        [Display(Name = "TodoStatus")]
+        public TodoStatus ToDoStatus { get; set; }
 
         public string ApplicationUserId { get; set; }
 
