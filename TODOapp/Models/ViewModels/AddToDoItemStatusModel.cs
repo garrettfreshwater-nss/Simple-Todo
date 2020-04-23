@@ -11,7 +11,7 @@ namespace TodoApp.Models.ViewModels
         public int Id { get; set; }
         
         [Required]
-        [Display(Name = "ToDoStatus")]
+        [Display(Name = "TodoStatus")]
         public string Title { get; set; }
 
         [Required]

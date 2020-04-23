@@ -96,7 +96,7 @@ namespace TodoApp.Controllers
         {
             try
             {
-                var todoItem = new ToDoItem
+                var todoItem = new TodoItem
                 {
                     Title = todoItemViewModel.Title,
                     TodoStatusId = todoItemViewModel.TodoStatusId
@@ -145,7 +145,7 @@ namespace TodoApp.Controllers
             {
                 var user = await GetCurrentUserAsync();
 
-                var todoItem = new ToDoItem()
+                var todoItem = new TodoItem()
                 {
                     Id = id,
                     Title = todoItemViewModel.Title,
@@ -175,7 +175,7 @@ namespace TodoApp.Controllers
         // POST: TodoItems/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Delete(int id, ToDoItem todoItem)
+        public async Task<ActionResult> Delete(int id, TodoItem todoItem)
         {
             try
             {

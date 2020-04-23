@@ -15,6 +15,6 @@ namespace TodoApp.Models
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-        public List<TodoItem> ToDoItems { get; set; }
+        public List<TodoItem> TodoItems { get; set; }
     }
 }

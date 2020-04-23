@@ -12,7 +12,7 @@ namespace TodoApp.Models
         public int Id { get; set; }
 
         [Required]
-        [Display(Name = "ToDoStatus")]
+        [Display(Name = "TodoStatus")]
         public string Title { get; set; }
 
     }

@@ -5,11 +5,11 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using TODOapp.Data;
-using TODOapp.Models;
+using TodoApp.Data;
+using TodoApp.Models;
 
-[assembly: HostingStartup(typeof(TODOapp.Areas.Identity.IdentityHostingStartup))]
-namespace TODOapp.Areas.Identity
+[assembly: HostingStartup(typeof(TodoApp.Areas.Identity.IdentityHostingStartup))]
+namespace TodoApp.Areas.Identity
 {
     public class IdentityHostingStartup : IHostingStartup
     {

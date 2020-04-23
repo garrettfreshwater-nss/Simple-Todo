@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TODOapp.Models.ToDoItem>
+﻿@model IEnumerable<TodoApp.Models.TodoItem>
 
 @{
     ViewData["Title"] = "Index";
@@ -16,7 +16,7 @@
                 @Html.DisplayNameFor(model => model.Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ToDoStatus)
+                @Html.DisplayNameFor(model => model.TodoStatus)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ApplicationUser)
@@ -31,7 +31,7 @@
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ToDoStatus.Title)
+                @Html.DisplayFor(modelItem => item.TodoStatus.Title)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ApplicationUser.Id)
