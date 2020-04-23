@@ -1,4 +1,4 @@
-﻿@model TodoApp.Models.TodoItem
+﻿@model TodoApp.Models.ViewModels.AddTodoItemStatusModel
 
 @{
     ViewData["Title"] = "Create";
@@ -6,7 +6,6 @@
 
 <h1>Create</h1>
 
-<h4>TodoItem</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -18,11 +17,11 @@
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Status" class="control-label"></label>
-                <input asp-for="Status" class="form-control" />
-                <span asp-validation-for="Status" class="text-danger"></span>
+                <label asp-for="TodoStatusId" class="control-label">Todo Status</label>
+                <select asp-for="TodoStatusId" class="form-control" asp-items="@Model.StatusOptions">
+                    <option value="0" hidden disabled>How much do have you done?</option>
+                </select>
             </div>
-
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

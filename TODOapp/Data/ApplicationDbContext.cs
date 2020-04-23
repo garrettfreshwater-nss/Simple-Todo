@@ -47,18 +47,18 @@ namespace TodoApp.Data
             modelBuilder.Entity<TodoStatus>().HasData(
                 new TodoStatus()
                 {
-                    Id = 2,
-                    Title = "Todo"
+                    Id = 1,
+                    Status = "To Do"
                 },
                 new TodoStatus()
                 {
-                    Id = 3,
-                    Title = "In Progress"
+                    Id = 2,
+                    Status = "In Progress"
                 },
                  new TodoStatus()
                  {
-                     Id = 4,
-                     Title = "Done"
+                    Id = 3,
+                    Status = "Done"
                  }
 
                  );

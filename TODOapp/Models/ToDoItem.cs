@@ -10,19 +10,12 @@ namespace TodoApp.Models
     public class TodoItem
     {
         public int Id { get; set; }
-
-        [Required]
-        [Display(Name = "Title")]
         public string Title { get; set; }
-
         public int TodoStatusId { get; set; }
-
         [Required]
-        [Display(Name = "TodoStatus")]
+        [Display(Name = "Todo Status")]
         public TodoStatus TodoStatus { get; set; }
-
         public string ApplicationUserId { get; set; }
-
         public ApplicationUser ApplicationUser { get; set; }
     }
 }
